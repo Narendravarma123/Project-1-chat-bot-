@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Chatbot</title>
+
+    <!-- Add Botpress scripts --><script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/8badd98b-1255-4b10-8a2f-ca1a3630a29c/webchat/config.js" defer></script>
+    
+    <!-- Add any additional scripts provided by Botpress -->
+
+    <!-- Add your custom CSS styles -->
+    <style>
+        #bp-widget {
+            width: 98.4%;
+            height: 95.5vh;
+        }
+        .phone{
+            position: absolute;
+            bottom: 40px;
+            right: 45px;
+        }
+       .phone-img{
+        width: 412px;
+        height: 640px;
+       }
+       body{
+        background: linear-gradient(90deg,#C499F3,#F2AFEF,#FFFFFF,#FFFFFF);
+       }
+      
+       .logo{
+        margin: 30px 0 0 30px;
+        display: flex;
+        font-size: 40px;
+        font-weight: 800;
+        color: #3d535f;
+        letter-spacing: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    b{
+        color:#7f00ff;
+        font-size: 70px;
+    }
+    *{
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    h1{
+        display: block;
+        font-size: 5.5rem;
+        font-weight: 900;
+        color: #3d535f;
+    }
+    .multitext{
+        color: #7f00ff;
+        text-transform: capitalize;
+        font-size: 4rem;
+        font-weight: 900;
+        margin: 50px 0 0 60px;
+    }
+    @media (max-width:1332px){
+        .topline,h1{
+            display: none;
+        }
+    }
+    @media (max-width:717px){
+        .logo{
+            display: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    
+    <!-- Embed Botpress widget -->
+    <div id="bp-widget" data-botpress-server="https://mediafiles.botpress.cloud/8badd98b-1255-4b10-8a2f-ca1a3630a29c/webchat/bot.html">
+        <div class="logo">Chatbot</div>
+        
+                <h1><span class="multitext"></span></h1>
+        <div class="phone">
+            <img src="phone.png" alt="" class="phone-img">
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typing = new Typed(".multitext",{
+            strings:['<span style="color:#424769;">Welcome to my Chatbot.</span>'],
+            loop:false,
+            typeSpeed:80,
+            backSpeed:60,
+            backDelay:1000
+        })
+    </script>
+</body>
+</html>
+
+
